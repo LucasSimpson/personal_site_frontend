@@ -1,29 +1,62 @@
-<h3>
-  Angular 2 Seed
-</h3>
-<nav>
-	<a [routerLink]="['/']">
-    Home
-  </a>
-  |
-	<a [routerLink]="['/about']">
-    About
-  </a>
-  |
-	<a [routerLink]="['/github', 'angular']">
-    Github Repos
-  </a>
-  |
-	<a [routerLink]="['/contact']">
-    Contact Us
-  </a>
-</nav>
+<div class="container">
+  <div class="row">
+    <nav>
+      <a [routerLink]="['/']">
+        Home
+      </a>
+      |
+      <a [routerLink]="['/about']">
+        About
+      </a>
+      |
+      <a [routerLink]="['/github', 'angular']">
+        Github Repos
+      </a>
+      |
+      <a [routerLink]="['/contact']">
+        Contact Us
+      </a>
+      |
+      <a [routerLink]="['/work_experience']">
+        Work Experience
+      </a>
+    </nav>
 
-<main>
-	<router-outlet></router-outlet>
-</main>
+
+  </div>
 
 
-<footer>
-  © 2016
-</footer>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="top-spacer"></div>
+    </div>
+  </div>
+
+  <div class="row" id="main-content">
+    <div class="col-md-3" id="side-nav">
+      <img class="img-responsive" src="images/me.jpg">
+
+      <div class="icon-links">
+        <a class="icon-link text-center" href="https://github.com/LucasSimpson"><i class="fa fa-github"></i></a>
+        <a class="icon-link text-center" href="https://www.linkedin.com/in/lucas-simpson"><i class="fa fa-linkedin"></i></a>
+        <a class="icon-link text-center" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+      </div>
+
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation"><a class="text-right nav-link" [routerLink]="['/']">Index</a></li>
+        <li role="presentation"><a class="text-right nav-link" [routerLink]="['/work_experience']">Work Experience</a></li>
+        <li role="presentation"><a class="text-right nav-link" href="#">Interests</a></li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+</div>
+
+
+
+
+
