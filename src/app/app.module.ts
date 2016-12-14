@@ -15,6 +15,9 @@ import { RepoDetailComponent } from './github/repo-detail/repo-detail.component'
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
 import { WorkExperienceComponent } from './work_experience/work_experience.component';
+import {WorkExperienceService} from "./work_experience/work_experience.service";
+import {BackgroundComponent} from "./background/background.component";
+import {LogManager} from "./log_manager";
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { WorkExperienceComponent } from './work_experience/work_experience.compo
     RepoDetailComponent,
     HomeComponent,
     ContactComponent,
-    WorkExperienceComponent
+    WorkExperienceComponent,
+    BackgroundComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { WorkExperienceComponent } from './work_experience/work_experience.compo
     RouterModule.forRoot(rootRouterConfig, { useHash: true })
   ],
   providers: [
-    GithubService
+    GithubService,
+    WorkExperienceService,
+    LogManager,
   ],
   bootstrap: [ AppComponent ]
 })

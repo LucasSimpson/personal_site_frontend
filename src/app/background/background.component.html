@@ -1,0 +1,7 @@
+<div id="background">
+  <ul id="log-container" [ngClass]="{'with-cursor': blink_toggle}">
+    <li *ngFor="let line of logs" class="log" [innerHTML]="line"></li>
+  </ul>
+</div>
+
+

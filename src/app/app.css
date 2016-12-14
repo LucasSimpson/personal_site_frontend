@@ -10,21 +10,8 @@ h1, h2, h3, h4, h5, h6, p, li {
   text-align: right;
 }
 
-body {
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 #top-spacer {
   height: 8vh;
-}
-
-#main-content {
-  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) );
-  box-shadow: 0px 0px 40px 40px rgba(0, 0, 0, 0.6); /* change to alter the effect*/
-  margin-bottom: 350px;
 }
 
 #side-nav {
