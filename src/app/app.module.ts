@@ -17,6 +17,8 @@ import {ApiService} from "./api/api_service";
 import {BackgroundComponent} from "./background/background.component";
 import {LogManager} from "./log_manager";
 import {InterestsComponent} from "./interests/interests.component";
+import {SidenavComponent} from "./sidenav/sidenav.component";
+import {HeaderComponent} from "./header/header.component";
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import {InterestsComponent} from "./interests/interests.component";
     WorkExperienceComponent,
     InterestsComponent,
     BackgroundComponent,
+    SidenavComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

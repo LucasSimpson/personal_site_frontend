@@ -16,3 +16,14 @@ h1, h2, h3, h4, h5, h6, p, li {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
+.shadow {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.image-rounded {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+
+  border-radius: 50%;
+}
