@@ -1,0 +1,23 @@
+#work-experience {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  overflow-x: scroll;
+  box-sizing: border-box; /* removes horizontal scrollbar */
+
+  background: #fafafa;
+}
+
+.work-experience-card {
+  width: 250px;
+
+  flex-shrink: 0;
+  background: #fafafa;
+  margin: 20px 0 20px 20px;
+}
+
+.work-experience-card:last-child {
+  margin-right: 20px;
+}

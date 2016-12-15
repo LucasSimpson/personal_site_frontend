@@ -1,9 +1,10 @@
 <div id="side-nav" class="shadow" [ngClass]="{'show-nav': showNav}">
+
   <div id="beautiful-me">
-    <img class="image-rounded shadow" src="images/me.jpg">
+    <img class="image-responsive shadow" src="images/me.jpg">
   </div>
 
-  <div class="icon-links">
+  <div id="icon-links">
     <a class="icon-link text-center" href="https://github.com/LucasSimpson"><i class="fa fa-github"></i></a>
     <a class="icon-link text-center" href="https://www.linkedin.com/in/lucas-simpson"><i class="fa fa-linkedin"></i></a>
     <a class="icon-link text-center" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
@@ -14,4 +15,5 @@
     <li role="presentation"><a class="text-right nav-link" [routerLink]="['/work_experience']">Work Experience</a></li>
     <li role="presentation"><a class="text-right nav-link" [routerLink]="['/interests']">Interests</a></li>
   </ul>
+
 </div>

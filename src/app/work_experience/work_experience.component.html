@@ -1,23 +1,14 @@
-<div class="row">
-  <div class="col-md-12">
+<div id="work-experience">
 
-    <div *ngFor="let work of work_experiences" class="card">
-      <div class="row">
-        <div class="col-xs-10">
-          <h3>{{ work.title }}</h3>
-          <h4>{{ work.company }}</h4>
-          <h6>{{ work.dates }} | {{ work.location }}</h6>
-        </div>
-        <div class="col-xs-2">
-          <img class="img-responsive img-circle" src="{{ work.img_url }}">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <p>{{ work.body }}</p>
-        </div>
-      </div>
-    </div>
+  <div *ngFor="let work of work_experiences" class="work-experience-card card">
 
+    <img class="image-responsive" src="{{ work.img_url }}">
+
+    <h3>{{ work.title }}</h3>
+    <h4>{{ work.company }}</h4>
+    <h6>{{ work.dates }} | {{ work.location }}</h6>
+
+    <p>{{ work.body }}</p>
   </div>
+
 </div>
