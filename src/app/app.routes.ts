@@ -7,6 +7,7 @@ import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { ContactComponent } from './contact/contact.component';
 import { WorkExperienceComponent } from './work_experience/work_experience.component';
+import {InterestsComponent} from "./interests/interests.component";
 
 export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -23,6 +24,7 @@ export const rootRouterConfig: Routes = [
       }]
   },
   { path: 'contact', component: ContactComponent },
-  { path: 'work_experience', component: WorkExperienceComponent }
+  { path: 'work_experience', component: WorkExperienceComponent },
+  { path: 'interests', component: InterestsComponent }
 ];
 

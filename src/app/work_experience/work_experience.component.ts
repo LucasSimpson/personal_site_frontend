@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from "@angular/core";
-import {WorkExperienceService} from "./work_experience.service";
-import {WorkExperience} from "./work_experience.model";
+import {ApiService} from "../api/api_service";
+import {WorkExperience} from "../api/work_experience.model";
 
 @Component({
   selector: 'work-experience',
@@ -11,11 +11,11 @@ import {WorkExperience} from "./work_experience.model";
 export class WorkExperienceComponent implements OnInit {
   work_experiences: WorkExperience[];
 
-  constructor(private workExperience: WorkExperienceService) {
+  constructor(private apiService: ApiService) {
   }
 
   ngOnInit() {
-    this.workExperience.all().subscribe(
+    this.apiService.work_experiences().subscribe(
       work_experiences => {
 
         work_experiences.sort(function (a: WorkExperience, b: WorkExperience) : number{
