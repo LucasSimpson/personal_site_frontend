@@ -2,13 +2,29 @@
 
   <div *ngFor="let work of work_experiences" class="work-experience-card card">
 
+    <div class="wec-header">
+      <img class="header-icon" src="{{ work.img_url }}">
+
+      <div> <!-- wec-header is flex display, we want these stacked vertically -->
+        <p class="title">{{ work.title }}</p>
+        <p class="subtitle">{{ work.company }}</p>
+      </div>
+    </div>
+
     <img class="image-responsive" src="{{ work.img_url }}">
 
-    <h3>{{ work.title }}</h3>
-    <h4>{{ work.company }}</h4>
-    <h6>{{ work.dates }} | {{ work.location }}</h6>
+    <div class="sub-info">
+      <div class="si-line">
+        <p class="icon"><span class="fa fa-clock-o" aria-hidden="true"></span></p>
+        <p class="text">{{ work.dates }}</p>
+      </div>
+      <div class="si-line">
+        <p class="icon"><span class="fa fa-map-marker" aria-hidden="true"></span></p>
+        <p class="text">{{ work.location }}</p>
+      </div>
+    </div>
 
-    <p>{{ work.body }}</p>
+    <p class="wec-body">{{ work.body }}</p>
   </div>
 
 </div>

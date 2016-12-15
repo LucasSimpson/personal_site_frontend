@@ -1,23 +1,97 @@
+/*Overall container*/
 #work-experience {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
 
-  overflow-x: scroll;
+  overflow-x: auto;
   box-sizing: border-box; /* removes horizontal scrollbar */
 
   background: #fafafa;
 }
 
+/*general for each card */
 .work-experience-card {
   width: 250px;
 
   flex-shrink: 0;
   background: #fafafa;
-  margin: 20px 0 20px 20px;
+
+  margin: 16px 0 16px 16px;
 }
 
+/*quick hack to get margins working properly?*/
 .work-experience-card:last-child {
-  margin-right: 20px;
+  margin-right: 16px;
+}
+
+/*top portion of content*/
+.wec-header {
+  /* same as .work-experience-card margin */
+  padding: 16px;
+  font-size: 14px;
+
+  display: flex;
+  flex-direction: row;
+}
+.wec-header .header-icon {
+  width: 40px; /* 72px - 2*16px */
+  height: 40px; /* square */
+  border-radius: 50%; /* circle */
+}
+.wec-header .title {
+  font-size: 14px;
+  margin: 0 0 0 16px;
+}
+.wec-header .subtitle {
+  font-size: 14px;
+  margin: 0 0 0 16px;
+  color: #aaa;
+}
+
+/*force 16:9 aspect ratio on rich media portion*/
+.work-experience-card img {
+  height: 140px; /* width * (9/16) */
+}
+
+/*directly below rich media*/
+.sub-info {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 16px 0 16px; /* margin and not padding so border follow spacing as well */
+  padding: 0 0 15px 0; /* space between text and border. 16px-1px for border = 15px; */
+
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: lightgray;
+}
+.sub-info .si-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.sub-info .icon {
+  width: 22px; /* icon is 14px, leaving 8px */
+  font-size: 14px;
+  margin: 0;
+}
+.sub-info .fa {
+  font-size: 14px;
+  margin: 0 auto;
+
+}
+.sub-info .fa-map-marker {
+  margin-left: 2px; /* center hack for map-marker being 4px skinnier */
+}
+.sub-info .text {
+  font-size: 14px;
+  margin: 0;
+}
+
+/*final general description*/
+.wec-body {
+  padding: 16px;
+  margin: 0;
+  color: #aaa;
 }
