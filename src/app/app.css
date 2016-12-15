@@ -1,22 +1,28 @@
-h1, h2, h3, h4, h5, h6, p, li {
-  color: #333;
-}
 
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
 
 #top-spacer {
-  height: 8vh;
+  background-color: #00a6fb;;
+  color: #333;
+
 }
 
+
 #side-nav {
+  margin-top: -15px;
   background-color: #fafafa;
   padding: 0;
+
+  display:flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+#side-nav > * {
+  flex: 0 1 auto;
+}
+
+#side-nav .expand {
+  flex: 1 1 auto;
 }
 
 #side-nav a {
