@@ -1,0 +1,93 @@
+@import '../global';
+
+$card-width: 225px;
+$card-spacing: 16px;
+
+#interests {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+
+  h2 {
+    padding: $card-spacing;
+    margin: 0;
+  }
+
+  #til-container {
+    padding: $card-spacing / 2;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    .til {
+      margin: $card-spacing / 2;
+      padding: 0;
+      border-radius: 2px;
+      width: $card-width;
+
+      .media {
+        width: $card-width;
+        height: $card-width * (9/16); /* dat aspect ratio */
+      }
+
+      .info {
+        padding: 24px 16px 16px 16px;
+
+        .title {
+          margin: 0;
+          padding: 0;
+          font-size: 24px;
+          @extend .font-primary;
+        }
+
+        .subtitle {
+          margin: 0 0 8px 0;
+          padding: 0;
+          font-size: 14px;
+          @extend .font-secondary;
+        }
+
+        .body {
+          margin: 0;
+          padding: 0;
+          font-size: 14px;
+          @extend .font-primary;
+        }
+      }
+    }
+  }
+}
+
+
+
+#fun-links {
+
+
+  width: 100%;
+  background: $white;
+
+  padding: $card-spacing;
+
+  h2 {
+    margin: 0 0 10px 0;
+  }
+
+  #links-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    .link {
+
+      a {
+        color: $accent-400;
+      }
+    }
+  }
+
+}
+

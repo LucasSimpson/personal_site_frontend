@@ -1,3 +1,5 @@
+@import '../global';
+
 #background {
   position: fixed;
   width: 100%;
@@ -22,7 +24,8 @@
   padding: 0;
   margin: 10px 0 0 0;
   list-style: none;
-  color: #00a6fb;
+  color: $blue-100;
+  opacity: 0.38;
 }
 
 .with-cursor .log:last-child:after {

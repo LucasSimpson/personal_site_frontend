@@ -4,7 +4,7 @@
 
 export class FunLink {
   constructor(
-    public readonly url: string,
+    public readonly link: string,
     public readonly title: string
-  ){}
+  ) {}
 }

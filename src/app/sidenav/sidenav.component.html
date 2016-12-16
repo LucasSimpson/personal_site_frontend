@@ -1,7 +1,7 @@
 <div id="side-nav" class="shadow" [ngClass]="{'show-nav': showNav}">
 
   <div id="beautiful-me">
-    <img class="image-responsive shadow" src="images/me.jpg">
+    <img class="image-responsive" src="images/me.jpg">
   </div>
 
   <div id="icon-links">
@@ -10,10 +10,10 @@
     <a class="icon-link text-center" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
   </div>
 
-  <ul class="nav nav-pills nav-stacked expand">
-    <li role="presentation"><a class="text-right nav-link" [routerLink]="['/']">Index</a></li>
-    <li role="presentation"><a class="text-right nav-link" [routerLink]="['/work_experience']">Work Experience</a></li>
-    <li role="presentation"><a class="text-right nav-link" [routerLink]="['/interests']">Interests</a></li>
+  <ul id="nav-links">
+    <li><a class="nav-link" [routerLink]="['/']">Index</a></li>
+    <li><a class="nav-link" [routerLink]="['/work_experience']">Work Experience</a></li>
+    <li><a class="nav-link" [routerLink]="['/interests']">Interests</a></li>
   </ul>
 
 </div>

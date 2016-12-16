@@ -12,14 +12,30 @@ $tealA-100: #A7FFEB;
 $tealA-200: #64FFDA;
 $tealA-400: #1DE9B6;
 
-$grey-300: #E0E0E0;
+$pink-100: #F8BBD0;
+$pink-500: #E91E63;
+$pink-700: #C2185B;
+$pink-800: #AD1457;
+$pinkA-100: #FF80AB;
+$pinkA-200: #FF4081;
+$pinkA-400: #F50057;
 
+
+$grey-300: #E0E0E0;
+$grey-500: #9E9E9E;
+
+$white: #FAFAFA;
 
 /* actual color palette */
 $primary-100: $blue-100;
 $primary-500: $blue-500;
 $primary-700: $blue-700;
 $primary-800: $blue-800;
+
+$secondary-100: $pink-100;
+$secondary-500: $pink-500;
+$secondary-700: $pink-700;
+$secondary-800: $pink-800;
 
 $accent-100: $tealA-100;
 $accent-200: $tealA-200;

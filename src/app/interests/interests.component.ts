@@ -5,7 +5,7 @@ import {FunLink} from "../api/fun_link.model";
 @Component({
   selector: 'interests',
   templateUrl: './interests.component.html',
-  styleUrls: ['./interests.component.css'],
+  styleUrls: ['./interests.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class InterestsComponent implements OnInit {
@@ -17,7 +17,9 @@ export class InterestsComponent implements OnInit {
   ngOnInit() {
     this.apiService.fun_links().subscribe(
       fun_links => {
-        this.fun_links = fun_links;
+        this.fun_links = fun_links.map(link => {
+          return link;
+        });
       },
       err => {
         console.log('ERROR: ' + err);

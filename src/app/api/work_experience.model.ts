@@ -10,6 +10,7 @@ export class WorkExperience {
     public readonly dates: string,
     public readonly location: string,
     public readonly body: string,
-    public readonly img_url: string
+    public readonly img_url: string,
+    public readonly rich_img_url: string
   ){}
 }

@@ -1,9 +1,63 @@
-<div class="row">
-  <div class="col-md-12 card">
 
-    <div *ngFor="let link of fun_links">
-      <a href="{{ link.url }}"><h3>{{ link.title }}</h3></a>
+<div id="interests">
+
+  <h2>Things I Enjoy :)</h2>
+
+  <div id="til-container">
+
+    <div class="til shadow">
+      <img class="media" src="https://smashfts.files.wordpress.com/2015/02/wpid-super_smash_bros__melee_by_abfdghafdg-d5lmrnd.png">
+
+      <div class="info">
+        <h1 class="title">Title</h1>
+      </div>
+    </div>
+
+    <div class="til shadow">
+      <img class="media" src="https://smashfts.files.wordpress.com/2015/02/wpid-super_smash_bros__melee_by_abfdghafdg-d5lmrnd.png">
+
+      <div class="info">
+        <h1 class="title">Title</h1>
+      </div>
+    </div>
+    <div class="til shadow">
+      <img class="media" src="https://smashfts.files.wordpress.com/2015/02/wpid-super_smash_bros__melee_by_abfdghafdg-d5lmrnd.png">
+
+      <div class="info">
+        <h1 class="title">Title</h1>
+      </div>
+    </div>
+    <div class="til shadow">
+      <img class="media" src="https://smashfts.files.wordpress.com/2015/02/wpid-super_smash_bros__melee_by_abfdghafdg-d5lmrnd.png">
+
+      <div class="info">
+        <h1 class="title">Title</h1>
+      </div>
+    </div>
+    <div class="til shadow">
+      <img class="media" src="https://smashfts.files.wordpress.com/2015/02/wpid-super_smash_bros__melee_by_abfdghafdg-d5lmrnd.png">
+
+      <div class="info">
+        <h1 class="title">Title</h1>
+      </div>
     </div>
 
   </div>
+
 </div>
+
+<div id="fun-links">
+  <h2>Links</h2>
+  <p>The following is a collection I find useful and/or interesting. I mostly keep them here as a personal reference, but you may find some of these interesting as well :)</p>
+
+  <div id="links-container">
+    <div class="link" *ngFor="let link of fun_links">
+      <a href="{{ link.link }}">{{ link.title }}</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+

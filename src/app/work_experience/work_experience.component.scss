@@ -14,7 +14,7 @@ $card-font-size: 14px;
   overflow-x: auto;
   box-sizing: border-box; /* removes horizontal scrollbar */
 
-  background: #fafafa;
+  background: $white;
 }
 
 /*general for each card */
@@ -22,7 +22,7 @@ $card-font-size: 14px;
   width: $card-width;
 
   flex-shrink: 0;
-  background: #fafafa;
+  background: $white;
 
   margin: $card-spacing 0 $card-spacing $card-spacing;
 }
@@ -71,9 +71,7 @@ $card-font-size: 14px;
 
   border-width: 0 0 1px 0;
   border-style: solid;
-  border-color: $grey-300;
-
-  @extend .font-secondary;
+  border-color: $grey-500;
 
   .si-line {
     display: flex;
@@ -84,6 +82,7 @@ $card-font-size: 14px;
     width: 22px; /* icon is 14px, leaving 8px */
     font-size: $card-font-size;
     margin: 0;
+    @extend .font-primary;
   }
   .fa {
     font-size: $card-font-size;
@@ -96,6 +95,7 @@ $card-font-size: 14px;
   .text {
     font-size: $card-font-size;
     margin: 0;
+    @extend .font-primary;
   }
 }
 

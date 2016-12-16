@@ -26,6 +26,12 @@ export class ApiService {
 
       // map to json and grab results
       .map(res => res.json().results);
+      // .flatMap((res, id) => {
+      //   return new FunLink(res.link, res.title);
+      // })
+      // .map(links => {
+      //   return Observable.of(links);
+      // });
   }
 
   // TODO iterate on pagination
