@@ -3,7 +3,7 @@ import {Component, ViewEncapsulation, EventEmitter, Output} from "@angular/core"
 @Component({
   selector: 'header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  styleUrls: ['header.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent{

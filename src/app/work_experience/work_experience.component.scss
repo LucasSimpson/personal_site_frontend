@@ -1,0 +1,108 @@
+@import '../global';
+
+$card-width: 300px;
+$card-spacing: 16px;
+$card-font-size: 14px;
+
+/*Overall container*/
+#work-experience {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  overflow-x: auto;
+  box-sizing: border-box; /* removes horizontal scrollbar */
+
+  background: #fafafa;
+}
+
+/*general for each card */
+.work-experience-card {
+  width: $card-width;
+
+  flex-shrink: 0;
+  background: #fafafa;
+
+  margin: $card-spacing 0 $card-spacing $card-spacing;
+}
+
+/*quick hack to get margins working properly?*/
+.work-experience-card:last-child {
+  margin-right: $card-spacing;
+}
+
+/*top portion of content*/
+.wec-header {
+  /* same as .work-experience-card margin */
+  padding: $card-spacing;
+  font-size: $card-font-size;
+
+  display: flex;
+  flex-direction: row;
+}
+.wec-header .header-icon {
+  width: 40px; /* 72px - 2*16px */
+  height: 40px; /* square */
+  border-radius: 50%; /* circle */
+}
+.wec-header .title {
+  font-size: $card-font-size;
+  margin: 0 0 0 $card-spacing;
+  @extend .font-primary;
+}
+.wec-header .subtitle {
+  font-size: $card-font-size;
+  margin: 0 0 0 $card-spacing;
+  @extend .font-secondary;
+}
+
+/*force 16:9 aspect ratio on rich media portion*/
+.work-experience-card img {
+  height: $card-width * (9/16); /* width * (9/16) */
+}
+
+/*directly below rich media*/
+.sub-info {
+  display: flex;
+  flex-direction: column;
+  margin: $card-spacing $card-spacing 0 $card-spacing; /* margin and not padding so border follow spacing as well */
+  padding: 0 0 $card-spacing - 1px 0; /* space between text and border. 16px-1px for border = 15px; */
+
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: $grey-300;
+
+  @extend .font-secondary;
+
+  .si-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .icon {
+    width: 22px; /* icon is 14px, leaving 8px */
+    font-size: $card-font-size;
+    margin: 0;
+  }
+  .fa {
+    font-size: $card-font-size;
+    margin: 0 auto;
+
+  }
+  .fa-map-marker {
+    margin-left: 2px; /* center hack for map-marker being 4px skinnier */
+  }
+  .text {
+    font-size: $card-font-size;
+    margin: 0;
+  }
+}
+
+
+/*final general description*/
+.wec-body {
+  padding: $card-spacing;
+  margin: 0;
+  @extend .font-primary;
+}

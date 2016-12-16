@@ -5,7 +5,7 @@ import {WorkExperience} from "../api/work_experience.model";
 @Component({
   selector: 'work-experience',
   templateUrl: './work_experience.component.html',
-  styleUrls: ['./work_experience.component.css'],
+  styleUrls: ['./work_experience.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class WorkExperienceComponent implements OnInit {

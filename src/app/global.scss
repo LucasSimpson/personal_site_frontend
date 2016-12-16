@@ -1,0 +1,75 @@
+/* raw colors */
+$blue-100: #BBDEFB;
+$blue-500: #2196F3;
+$blue-700: #1976D2;
+$blue-800: #1565C0;
+
+$teal-100: #BBDEFB;
+$teal-500: #2196F3;
+$teal-700: #1976D2;
+$teal-800: #1565C0;
+$tealA-100: #A7FFEB;
+$tealA-200: #64FFDA;
+$tealA-400: #1DE9B6;
+
+$grey-300: #E0E0E0;
+
+
+/* actual color palette */
+$primary-100: $blue-100;
+$primary-500: $blue-500;
+$primary-700: $blue-700;
+$primary-800: $blue-800;
+
+$accent-100: $tealA-100;
+$accent-200: $tealA-200;
+$accent-400: $tealA-400;
+
+h1, h2, h3, h4, h5, h6, p, li {
+  @extend .font-primary;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.card {
+  border-radius: 2px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.shadow {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.image-responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.font-primary {
+  color: #000000;
+  opacity: .84;
+}
+.font-secondary {
+  color: #000000;
+  opacity: 0.54;
+}
+.font-hint {
+  color: #000000;
+  opacity: 0.38;
+}
+.font-white-primary {
+  color: #FFFFFF;
+  opacity: 1;
+}
+.font-white-secondary {
+  color: #FFFFFF;
+  opacity: 0.7;
+}
