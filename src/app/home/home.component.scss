@@ -1,0 +1,14 @@
+@import '../global';
+
+#home {
+  background: $white;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 $SPACE;
+
+  a {
+    color: $accent-200;
+  }
+}

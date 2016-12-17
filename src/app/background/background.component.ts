@@ -13,6 +13,7 @@ export class BackgroundComponent {
   public blink_toggle: boolean;
 
   constructor(private logManager: LogManager) {
+
     // subscribe to log stream
     logManager.stream().subscribe(line => {
       this.logs.push(line);
@@ -24,6 +25,9 @@ export class BackgroundComponent {
       tick => {
         this.blink_toggle = this.blink_toggle == false;
       }
-    )
+    );
+
+    // initial log :)
+    this.logs.push(`[${logManager.currentDateTime()}] log initialized`);
   }
 }
