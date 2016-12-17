@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation, EventEmitter, Output} from "@angular/core";
+import {SidenavManager} from "../sidenav/sidenav.manager";
 
 @Component({
   selector: 'header',
@@ -7,16 +8,14 @@ import {Component, ViewEncapsulation, EventEmitter, Output} from "@angular/core"
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent{
-  @Output() onNavToggle = new EventEmitter<boolean>();
-  private showSideNav: boolean;
+  private sidenavManager: SidenavManager;
 
-  constructor() {
-    this.showSideNav = false;
+  constructor(sidenavManager: SidenavManager) {
+    this.sidenavManager = sidenavManager;
   }
 
   // toggle state of side nav
   public toggleSideNav() {
-    this.showSideNav = this.showSideNav == false;
-    this.onNavToggle.emit(this.showSideNav);
+    this.sidenavManager.toggle();
   }
 }

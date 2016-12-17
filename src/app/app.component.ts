@@ -7,9 +7,4 @@ import {Component, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  public showNav: boolean = false;
-
-  public onNavToggle(navState: boolean) {
-    this.showNav = navState;
-  }
 }

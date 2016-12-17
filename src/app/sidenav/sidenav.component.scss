@@ -123,3 +123,9 @@ $nav-space: 17px;
     transform: none;
   }
 }
+
+@media (max-width: 576px) {
+  #side-nav {
+    margin-top: 60px;
+  }
+}

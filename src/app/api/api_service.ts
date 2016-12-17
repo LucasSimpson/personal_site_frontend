@@ -9,36 +9,75 @@ import {Interest} from "./interests.model";
 
 @Injectable()
 export class ApiService {
-  private static ROOT = "http://localhost:8000";
+  private static ROOT = "https://lucassimpson.com/";
   private headers: Headers = new Headers();
+
+  private cachedWorkExperiences: WorkExperience[] = null;
+  private cachedFunLinks: FunLink[] = null;
+  private cachedInterests: Interest[] = null;
 
   constructor(private http: Http, private logManager: LogManager) {
     this.headers.append('Accept', 'application/json');
+
+    // cache all calls right away
+    this.work_experiences();
+    this.fun_links();
+    this.interests();
   }
 
   // grabs all WorkExperiences from api
   work_experiences() : Observable<WorkExperience[]> {
-    return this.makeRequest('work_experience', '')
+    if (this.cachedWorkExperiences == null) {
+      return this.makeRequest('work_experience', '')
 
-      // map to json and grab results
-      .map(res => res.json().results);
+        // map to json and grab results
+        .map(res => res.json().results)
+
+        // cache results
+        .do(results => {
+          this.cachedWorkExperiences = results;
+        });
+    } else {
+      return Observable.of(this.cachedWorkExperiences);
+    }
   }
+
 
   // grabs all FunLinks from api
   fun_links(): Observable<FunLink[]> {
-    return this.makeRequest('fun_links', '')
+    if (this.cachedFunLinks == null) {
+      return this.makeRequest('fun_links', '')
 
-      // map to json and grab results
-      .map(res => res.json().results);
+        // map to json and grab results
+        .map(res => res.json().results)
+
+        // cache results
+        .do(results => {
+          this.cachedFunLinks = results;
+        });
+    } else {
+      return Observable.of(this.cachedFunLinks);
+    }
   }
+
 
   // grabs all interests from api
   interests(): Observable<Interest[]> {
-    return this.makeRequest('interests', '')
+    if (this.cachedInterests == null) {
+      return this.makeRequest('interests', '')
 
-      // map to json and grab results
-      .map(res => res.json().results);
+        // map to json and grab results
+        .map(res => res.json().results)
+
+        // cache results
+        .do(results => {
+          this.cachedInterests = results;
+        });
+    } else {
+      return Observable.of(this.cachedInterests);
+    }
   }
+
 
   // TODO iterate on pagination
   private makeRequest(resource:string, path: string) : Observable<Response> {

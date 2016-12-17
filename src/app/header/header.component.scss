@@ -4,6 +4,8 @@ $top-bar-height: 8px;
 $total-height: 80px;
 $font-size: 36px;
 
+$total-height-small: 60px;
+$font-size-small: 27px;
 
 @media (max-width: 992px) {
   #top-bar {
@@ -39,12 +41,6 @@ $font-size: 36px;
 
     font-size: $font-size;
     text-align: center;
-  }
-  @media (max-width: 576px) {
-    h1 {
-      text-align: left;
-      margin-left: $SPACE;
-    }
   }
 
   #nav-toggle {
@@ -83,3 +79,26 @@ $font-size: 36px;
 }
 
 
+
+@media (max-width: 576px) {
+  #header {
+    height: $total-height-small;
+
+    h1 {
+      font-size: $font-size-small;
+      text-align: left;
+      margin: (($total-height-small - $top-bar-height - $font-size-small) / 2) 0 0 $SPACE;
+    }
+
+    #nav-toggle {
+      font-size: $font-size-small;
+
+      top: ($total-height-small - $top-bar-height - $font-size-small) / 2 + $top-bar-height;
+      right: ($total-height-small - $top-bar-height - $font-size-small) / 2;
+    }
+  }
+
+  #header-spacer {
+    height: $total-height-small;
+  }
+}
