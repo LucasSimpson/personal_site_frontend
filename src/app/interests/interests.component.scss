@@ -1,20 +1,14 @@
 @import '../global';
 
 $card-width: 225px;
-$card-spacing: 16px;
 
 #interests {
   display: flex;
   flex-direction: column;
   background-color: $white;
 
-  h2 {
-    padding: $card-spacing;
-    margin: 0;
-  }
-
   #til-container {
-    padding: $card-spacing / 2;
+    padding: $SPACE / 2;
     display: flex;
     flex-flow: row;
     flex-wrap: nowrap;
@@ -23,12 +17,14 @@ $card-spacing: 16px;
     overflow-x: auto;
 
     .til {
-      margin: $card-spacing / 2;
+      margin: $SPACE / 2;
       padding: 0;
       border-radius: 2px;
       width: $card-width;
+      background: $white;
 
       .media {
+        background: $white;
         width: $card-width;
         height: $card-width * (9/16); /* dat aspect ratio */
       }
@@ -61,33 +57,48 @@ $card-spacing: 16px;
   }
 }
 
-
+#interests-title {
+  background: $white;
+  padding: $SPACE;
+}
 
 #fun-links {
-
-
+  background: $primary-500;
   width: 100%;
-  background: $white;
-
-  padding: $card-spacing;
+  padding: $SPACE;
 
   h2 {
+    @extend .font-white-primary;
     margin: 0 0 10px 0;
   }
 
-  #links-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+  p {
+    @extend .font-white-primary;
+  }
+}
 
-    .link {
+#links-container {
+  background: $white;
 
-      a {
-        color: $accent-400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+
+  .link {
+    padding: $SPACE;
+
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: $grey-300;
+
+    a {
+      color: $accent-200;
+
+      .fa {
+        margin-left: $SPACE;
       }
     }
   }
-
 }
 

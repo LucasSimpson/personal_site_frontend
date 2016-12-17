@@ -4,16 +4,20 @@
     <img class="image-responsive" src="images/me.jpg">
   </div>
 
-  <div id="icon-links">
-    <a class="icon-link text-center" href="https://github.com/LucasSimpson"><i class="fa fa-github"></i></a>
-    <a class="icon-link text-center" href="https://www.linkedin.com/in/lucas-simpson"><i class="fa fa-linkedin"></i></a>
-    <a class="icon-link text-center" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+  <div id="icon-links" class="shadow">
+    <a id="first" class="icon-link text-center" href="https://github.com/LucasSimpson"><i class="fa fa-github"></i></a>
+    <a id="second" class="icon-link text-center" href="https://www.linkedin.com/in/lucas-simpson"><i class="fa fa-linkedin"></i></a>
+    <a id="third" class="icon-link text-center" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
   </div>
 
   <ul id="nav-links">
-    <li><a class="nav-link" [routerLink]="['/']">Index</a></li>
-    <li><a class="nav-link" [routerLink]="['/work_experience']">Work Experience</a></li>
+    <li><a class="nav-link" [routerLink]="['/']">Home</a></li>
     <li><a class="nav-link" [routerLink]="['/interests']">Interests</a></li>
+    <li><a class="nav-link" [routerLink]="['/work_experience']">Work Experience</a></li>
   </ul>
+
+  <footer>
+    <p id="email">lucassimpson05@gmail.com</p>
+  </footer>
 
 </div>

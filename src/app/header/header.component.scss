@@ -2,21 +2,9 @@
 
 $top-bar-height: 8px;
 $total-height: 80px;
+$font-size: 36px;
 
-#top-bar {
-  height: $top-bar-height;
-  width: 100%;
 
-  background: $primary-700;
-
-  position: fixed;
-  top: 0;
-
-  z-index: 2;
-
-  /* hack to fix centering issues */
-  padding-right: 300px;
-}
 @media (max-width: 992px) {
   #top-bar {
     padding-right: 0;
@@ -26,33 +14,46 @@ $total-height: 80px;
 #header {
   background-color: $primary-500;
 
-  height: $total-height - $top-bar-height;
+  height: $total-height;
   width: 100%;
-
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-
-  justify-content: space-around;
 
   position: fixed;
   z-index: 1;
-  top: $top-bar-height;
+  top: 0;
+
+  #top-bar {
+    height: $top-bar-height;
+    width: 100%;
+
+    background: $primary-700;
+
+    /* hack to fix centering issues */
+    padding-right: 300px;
+  }
 
   h1 {
     @extend .font-white-primary;
     flex: 1 1 auto;
     padding: 0;
-    margin: 0;
+    margin: (($total-height - $top-bar-height - $font-size) / 2) 0 0 0;
 
+    font-size: $font-size;
     text-align: center;
+  }
+  @media (max-width: 576px) {
+    h1 {
+      text-align: left;
+      margin-left: $SPACE;
+    }
   }
 
   #nav-toggle {
-    flex: 0 1 auto;
+    position: fixed;
+    top: ($total-height - $top-bar-height - $font-size) / 2 + $top-bar-height;
+    right: ($total-height - $top-bar-height - $font-size) / 2;
 
-    font-size: 36px;
-    padding: 17px;
+    font-size: $font-size;
+    @extend .font-white-primary;
 
     display: none; /* default hidden */
   }

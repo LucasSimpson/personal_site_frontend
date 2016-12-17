@@ -1,7 +1,6 @@
 @import '../global';
 
 $card-width: 300px;
-$card-spacing: 16px;
 $card-font-size: 14px;
 
 /*Overall container*/
@@ -24,18 +23,18 @@ $card-font-size: 14px;
   flex-shrink: 0;
   background: $white;
 
-  margin: $card-spacing 0 $card-spacing $card-spacing;
+  margin: $SPACE 0 $SPACE $SPACE;
 }
 
 /*quick hack to get margins working properly?*/
 .work-experience-card:last-child {
-  margin-right: $card-spacing;
+  margin-right: $SPACE;
 }
 
 /*top portion of content*/
 .wec-header {
   /* same as .work-experience-card margin */
-  padding: $card-spacing;
+  padding: $SPACE;
   font-size: $card-font-size;
 
   display: flex;
@@ -48,12 +47,12 @@ $card-font-size: 14px;
 }
 .wec-header .title {
   font-size: $card-font-size;
-  margin: 0 0 0 $card-spacing;
+  margin: 0 0 0 $SPACE;
   @extend .font-primary;
 }
 .wec-header .subtitle {
   font-size: $card-font-size;
-  margin: 0 0 0 $card-spacing;
+  margin: 0 0 0 $SPACE;
   @extend .font-secondary;
 }
 
@@ -66,8 +65,8 @@ $card-font-size: 14px;
 .sub-info {
   display: flex;
   flex-direction: column;
-  margin: $card-spacing $card-spacing 0 $card-spacing; /* margin and not padding so border follow spacing as well */
-  padding: 0 0 $card-spacing - 1px 0; /* space between text and border. 16px-1px for border = 15px; */
+  margin: $SPACE $SPACE 0 $SPACE; /* margin and not padding so border follow spacing as well */
+  padding: 0 0 $SPACE - 1px 0; /* space between text and border. 16px-1px for border = 15px; */
 
   border-width: 0 0 1px 0;
   border-style: solid;
@@ -102,7 +101,16 @@ $card-font-size: 14px;
 
 /*final general description*/
 .wec-body {
-  padding: $card-spacing;
+  padding: $SPACE;
   margin: 0;
   @extend .font-primary;
+}
+
+#work-experience-title {
+  background: $white;
+  padding: $SPACE;
+
+  #resume-link {
+    color: $accent-200;
+  }
 }

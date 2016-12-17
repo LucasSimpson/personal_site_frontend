@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
-import {Http, URLSearchParams, Response} from '@angular/http';
+import {Http, URLSearchParams, Response, Headers} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from "rxjs";
 import {WorkExperience} from "./work_experience.model";
 import {LogManager} from "../log_manager";
 import {FunLink} from "./fun_link.model";
+import {Interest} from "./interests.model";
 
 @Injectable()
 export class ApiService {
   private static ROOT = "http://localhost:8000";
+  private headers: Headers = new Headers();
 
-  constructor(private http: Http, private logManager: LogManager) {}
+  constructor(private http: Http, private logManager: LogManager) {
+    this.headers.append('Accept', 'application/json');
+  }
 
   // grabs all WorkExperiences from api
   work_experiences() : Observable<WorkExperience[]> {
@@ -26,12 +30,14 @@ export class ApiService {
 
       // map to json and grab results
       .map(res => res.json().results);
-      // .flatMap((res, id) => {
-      //   return new FunLink(res.link, res.title);
-      // })
-      // .map(links => {
-      //   return Observable.of(links);
-      // });
+  }
+
+  // grabs all interests from api
+  interests(): Observable<Interest[]> {
+    return this.makeRequest('interests', '')
+
+      // map to json and grab results
+      .map(res => res.json().results);
   }
 
   // TODO iterate on pagination
@@ -44,7 +50,7 @@ export class ApiService {
     this.logManager.log(`[${this.logManager.currentDateTime()}] \"GET ${url}\"`);
 
     // make request
-    return this.http.get(url)
+    return this.http.get(url, {headers: this.headers})
 
       // log results
       .do(res => {
@@ -56,7 +62,7 @@ export class ApiService {
       // catch errors and log those as well
       .catch(error => {
         this.logManager.log(error.toString());
-        return Observable.throw(error.json().error || 'Server Error')
+        return Observable.throw(error.toString() || 'Server Error')
       });
   }
 }

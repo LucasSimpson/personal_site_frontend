@@ -1,61 +1,33 @@
 
 <div id="interests">
 
-  <h2>Things I Enjoy :)</h2>
-
   <div id="til-container">
 
-    <div class="til shadow">
-      <img class="media" src="https://smashfts.files.wordpress.com/2015/02/wpid-super_smash_bros__melee_by_abfdghafdg-d5lmrnd.png">
+    <div *ngFor="let interest of interests" class="til shadow">
+      <img class="media" src="{{ interest.url }}">
 
       <div class="info">
-        <h1 class="title">Title</h1>
-      </div>
-    </div>
-
-    <div class="til shadow">
-      <img class="media" src="https://smashfts.files.wordpress.com/2015/02/wpid-super_smash_bros__melee_by_abfdghafdg-d5lmrnd.png">
-
-      <div class="info">
-        <h1 class="title">Title</h1>
-      </div>
-    </div>
-    <div class="til shadow">
-      <img class="media" src="https://smashfts.files.wordpress.com/2015/02/wpid-super_smash_bros__melee_by_abfdghafdg-d5lmrnd.png">
-
-      <div class="info">
-        <h1 class="title">Title</h1>
-      </div>
-    </div>
-    <div class="til shadow">
-      <img class="media" src="https://smashfts.files.wordpress.com/2015/02/wpid-super_smash_bros__melee_by_abfdghafdg-d5lmrnd.png">
-
-      <div class="info">
-        <h1 class="title">Title</h1>
-      </div>
-    </div>
-    <div class="til shadow">
-      <img class="media" src="https://smashfts.files.wordpress.com/2015/02/wpid-super_smash_bros__melee_by_abfdghafdg-d5lmrnd.png">
-
-      <div class="info">
-        <h1 class="title">Title</h1>
+        <h1 class="title">{{ interest.title }}</h1>
       </div>
     </div>
 
   </div>
-
 </div>
 
-<div id="fun-links">
+<div id="interests-title">
+  <h1>Interests</h1>
+  <p>Some of the things I enjoy in life <i class="fa fa-thumbs-up" aria-hidden="true"></i></p>
+</div>
+
+<div id="fun-links" class="shadow">
   <h2>Links</h2>
-  <p>The following is a collection I find useful and/or interesting. I mostly keep them here as a personal reference, but you may find some of these interesting as well :)</p>
+  <p>The following is a collection I find useful and/or interesting. I mostly keep them here as a personal reference, but you may find some of these interesting as well.</p>
+</div>
 
-  <div id="links-container">
-    <div class="link" *ngFor="let link of fun_links">
-      <a href="{{ link.link }}">{{ link.title }}</a>
-    </div>
+<div id="links-container">
+  <div class="link" *ngFor="let link of fun_links">
+    <a href="{{ link.link }}">{{ link.title }}<i class="fa fa-external-link" aria-hidden="true"></i></a>
   </div>
-
 </div>
 
 
