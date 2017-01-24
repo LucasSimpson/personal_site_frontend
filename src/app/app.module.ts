@@ -20,6 +20,7 @@ import {InterestsComponent} from "./interests/interests.component";
 import {SidenavComponent} from "./sidenav/sidenav.component";
 import {HeaderComponent} from "./header/header.component";
 import {SidenavManager} from "./sidenav/sidenav.manager";
+import {LogsComponent} from "./logs/log.component.html";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {SidenavManager} from "./sidenav/sidenav.manager";
     InterestsComponent,
     BackgroundComponent,
     SidenavComponent,
-    HeaderComponent
+    HeaderComponent,
+    LogsComponent
   ],
   imports: [
     BrowserModule,
