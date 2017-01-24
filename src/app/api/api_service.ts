@@ -9,7 +9,7 @@ import {Interest} from "./interests.model";
 
 @Injectable()
 export class ApiService {
-  private static ROOT = "http://localhost:8000";//"https://lucassimpson.com";
+  private static ROOT = "https://lucassimpson.com";
   private headers: Headers = new Headers();
 
   private cachedWorkExperiences: WorkExperience[] = null;
